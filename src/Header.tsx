@@ -1,11 +1,13 @@
 import React from 'react'
 import image from './assets/Logo.svg' 
-import { HeaderContainer } from './header'
+import { HeaderContainer, ImgContainer } from './Header'
 
 export function Header() {
   return(
     <HeaderContainer>
-      <img src={image} alt='' />
+      <ImgContainer>
+        <img src={image} alt='' />
+      </ImgContainer>
     </HeaderContainer>
   )
 }
