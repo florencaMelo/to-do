@@ -6,7 +6,6 @@ export const NewTaskContainer = styled.div`
   gap: 8px;
   margin: -2rem auto 0 auto;
 `
-
 export const Input = styled.input`
   width: 638px;
   padding: 16px;

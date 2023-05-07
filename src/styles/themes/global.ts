@@ -6,8 +6,10 @@ export const GlobalStyle = createGlobalStyle `
     padding: 0;
     box-sizing: border-box;
   }
+
   body{
     color: #333;
     color: white;
+    background-color: #1a1a1a;
   }
 `

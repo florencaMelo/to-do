@@ -1,4 +1,5 @@
 import { Header } from './components/Header.tsx'
+import { Info } from './components/Info.tsx'
 import { NewTask } from './components/NewTask.tsx'
 import { GlobalStyle } from "./styles/themes/global"
 
@@ -7,6 +8,7 @@ export function App() {
     <>
       <Header />
       <NewTask />
+      <Info />
 
       <GlobalStyle />
     </>
