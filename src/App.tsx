@@ -11,7 +11,6 @@ export function App() {
       <NewTask />
       <Info />
       <Tarefas />
-
       <GlobalStyle />
     </>
   )

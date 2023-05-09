@@ -12,14 +12,12 @@ export const DivContainer = styled.div`
   color: #4EA8DE;
   display: flex;
   gap: 0.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
   span{
     background-color: #333333;
     border-radius: 999px;
     width: 25px;
     color: #fff;
+    text-align: center;
   }
 `
