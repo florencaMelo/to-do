@@ -10,5 +10,4 @@ export const TarefasContainer = styled.div`
   img{
     margin-bottom: 1rem;
   }
-
 `

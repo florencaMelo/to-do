@@ -23,14 +23,17 @@ export function NewTask() {
       <NewTaskContainer>
       <form onSubmit={handleCreateNewComment}>
         <Input 
+          placeholder={'Adicione uma nova tarefa'}
           onChange={handleInputChange}
           value={newTask}
         /> 
         <Button>Criar</Button>
       </form>
     </NewTaskContainer>
+
     <Info tasks={tasks} />
     <Tarefas tasks={tasks} />
+
     </div>
   )
 }
