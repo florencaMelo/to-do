@@ -2,8 +2,13 @@ import styled from "styled-components";
 
 export const ListaTarefasContainer = styled.div`
   display: flex;
-  justify-content: center;
-  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333333;
+  border-radius: 8px;
+  height: 4.5rem;
+  width: 46rem;
+  margin: 0 auto 2rem auto;
 
 `
 
@@ -14,6 +19,7 @@ export const InputStyle = styled.input`
   width: 1rem;
   border-radius: 50%;
   cursor: pointer;
+  margin-left: 1rem;
 
   :checked{
     background-color: #8284FA;
@@ -22,6 +28,6 @@ export const InputStyle = styled.input`
 
 export const Img = styled.img`
   cursor: pointer;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.7rem;
+  margin-right: 1rem;
 `
