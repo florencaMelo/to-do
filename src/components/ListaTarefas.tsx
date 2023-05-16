@@ -1,14 +1,29 @@
 import React from "react"
-import { Img, InputStyle, ListaTarefasContainer } from "./ListaTarefas"
-import Trash  from '../assets/trash.svg'
+import { InputStyle, ListaTarefasContainer } from "./ListaTarefas"
+import { Trash } from 'phosphor-react'
 
-export function ListaTarefas({taskText}){
+interface ListaTarefasProps {
+  taskText: string
+  onDeleteTask: (task: string) => void
+}
+
+export function ListaTarefas({taskText, onDeleteTask}: ListaTarefasProps) {
+
+  function handleDeleteTask() {
+    onDeleteTask(taskText)
+  }
 
   return(
     <ListaTarefasContainer>
+
       <InputStyle type="checkbox" />
+
       <p>{taskText}</p>
-      <Img src={Trash} alt="" />
+      
+      <button onClick={handleDeleteTask}>
+        <Trash />
+      </button>
+    
     </ListaTarefasContainer>
   )
 }

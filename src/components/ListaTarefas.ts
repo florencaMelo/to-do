@@ -15,8 +15,8 @@ export const ListaTarefasContainer = styled.div`
 export const InputStyle = styled.input`
   appearance: none;
   border: 1px solid #4EA8DE;
-  height: 1rem;
-  width: 1rem;
+  height: 1.2rem;
+  width: 1.2rem;
   border-radius: 50%;
   cursor: pointer;
   margin-left: 1rem;
@@ -24,10 +24,4 @@ export const InputStyle = styled.input`
   :checked{
     background-color: #8284FA;
   }
-`
-
-export const Img = styled.img`
-  cursor: pointer;
-  width: 1.7rem;
-  margin-right: 1rem;
 `

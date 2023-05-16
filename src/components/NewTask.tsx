@@ -1,39 +1,35 @@
-import React, { useState } from 'react'
+import React, { useState, FormEvent, ChangeEvent } from 'react'
 import { Button, Input, NewTaskContainer } from './NewTask'
-import { Tarefas } from './Tarefas.tsx'
-import { Info } from './Info.tsx'
 
-export function NewTask() {
+interface NewTaskProps {
+  tasks: string[],
+  setTasks: (newValue: string[]) => void
+}
 
-  const [tasks, setTasks] = useState<string[]>([])
-
+export function NewTask({ tasks, setTasks }: NewTaskProps) {
   const [newTask, setNewTask] = useState('')
 
-  function handleCreateNewComment(event) {
+  function handleCreateNewComment(event: FormEvent) {
     event.preventDefault()
     setTasks([...tasks, newTask])
   }
 
-  function handleInputChange(event){
+  function handleInputChange(event: ChangeEvent<HTMLInputElement>) {
     setNewTask(event.target.value)
   }
 
   return(
     <div>
       <NewTaskContainer>
-      <form onSubmit={handleCreateNewComment}>
-        <Input 
-          placeholder={'Adicione uma nova tarefa'}
-          onChange={handleInputChange}
-          value={newTask}
-        /> 
-        <Button>Criar</Button>
-      </form>
-    </NewTaskContainer>
-
-    <Info tasks={tasks} />
-    <Tarefas tasks={tasks} />
-
+        <form onSubmit={handleCreateNewComment}>
+          <Input 
+            placeholder={'Adicione uma nova tarefa'}
+            onChange={handleInputChange}
+            value={newTask}
+          /> 
+          <Button>Criar</Button>
+        </form>
+      </NewTaskContainer>
     </div>
   )
 }

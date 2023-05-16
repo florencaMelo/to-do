@@ -1,7 +1,11 @@
 import React from "react"
 import { DivContainer, InfoContainer } from "./Info"
 
-export function Info({tasks}) {
+interface InfoProps {
+  tasks: string[]
+}
+
+export function Info({ tasks }: InfoProps) {
   return(
     <InfoContainer>
       <DivContainer>
