@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { InputStyle, ListaTarefasContainer } from "./ListaTarefas"
 import { Trash } from 'phosphor-react'
 
@@ -13,17 +13,19 @@ export function ListaTarefas({taskText, onDeleteTask}: ListaTarefasProps) {
     onDeleteTask(taskText)
   }
 
+  function handleCheckTask() {
+  }
+
   return(
     <ListaTarefasContainer>
-
-      <InputStyle type="checkbox" />
-
+      <InputStyle 
+        type="checkbox"
+        onClick={handleCheckTask} 
+        />
       <p>{taskText}</p>
-      
       <button onClick={handleDeleteTask}>
         <Trash />
       </button>
-    
     </ListaTarefasContainer>
   )
 }

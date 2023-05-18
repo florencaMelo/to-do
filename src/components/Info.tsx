@@ -1,8 +1,13 @@
 import React from "react"
 import { DivContainer, InfoContainer } from "./Info"
 
+interface Task {
+  taskText: string
+  completed: boolean
+}
+
 interface InfoProps {
-  tasks: string[]
+  tasks: Task[]
 }
 
 export function Info({ tasks }: InfoProps) {
@@ -14,7 +19,7 @@ export function Info({ tasks }: InfoProps) {
       </DivContainer>
       <DivContainer>
         <p>Concluídas</p>
-        <span></span>
+        <span>0</span>
       </DivContainer>
     </InfoContainer>
   )
