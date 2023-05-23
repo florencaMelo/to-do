@@ -26,7 +26,7 @@ export function Tarefas({ tasks, setTasks }: TarefasProps) {
   return(
     <div>
       {tasks.length > 0 ? tasks.map((task: Task) => {
-        return <ListaTarefas taskText={task.taskText} onDeleteTask={deleteTask}/> })  : (
+        return <ListaTarefas task={task} onDeleteTask={deleteTask}/> })  : (
         <TarefasContainer >
           <img src={Image} alt="" />
           <b>Você ainda não tem tarefas cadastradas</b>

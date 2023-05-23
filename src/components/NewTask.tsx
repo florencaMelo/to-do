@@ -14,14 +14,16 @@ interface NewTaskProps {
 export function NewTask({ tasks, setTasks }: NewTaskProps) {
   const [newTask, setNewTask] = useState('')
 
-  function handleCreateNewComment(event: FormEvent, data: string) {
+  function handleCreateNewTask(event: FormEvent) {
     event.preventDefault()
-    const newTask:Task = {
-      taskText: data, 
+
+    const newCreatedTask:Task = {
+      taskText: newTask, 
       completed: false
     }
-    setTasks([...tasks, newTask])
-    
+
+    setTasks([...tasks, newCreatedTask])
+    setNewTask('')
   }
 
   function handleInputChange(event: ChangeEvent<HTMLInputElement>) {
@@ -31,7 +33,7 @@ export function NewTask({ tasks, setTasks }: NewTaskProps) {
   return(
     <div>
       <NewTaskContainer>
-        <form onSubmit={handleCreateNewComment}>
+        <form onSubmit={handleCreateNewTask}>
           <Input 
             placeholder={'Adicione uma nova tarefa'}
             onChange={handleInputChange}
